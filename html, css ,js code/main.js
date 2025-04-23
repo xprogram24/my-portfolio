@@ -122,3 +122,51 @@ if(savedTheme){
     document.body.classList[savedTheme === 'dark' ? 'add' : 'remove']('dark-theme');
     themebtn.classList[savedIcons === 'sun' ? 'add' : 'remove']('sun')
 }
+//navigation 
+const menuBtn = document.querySelector(".nav-menu-btn")
+const closeBtn = document.querySelector(".nav-close-btn")
+const  navigation = document.querySelector('.navigation')
+const navItems = document.querySelectorAll('.nav-items a')
+
+menuBtn.addEventListener('click', function(){
+    navigation.classList.add('active');
+    console.log("clicked");
+    
+   
+    
+})
+closeBtn.addEventListener('click', function(){
+    navigation.classList.remove('active');
+   
+    
+})
+
+//remove navigartion when a nav-item is clicked using eventlisners
+navItems.forEach((navItem) => {
+    navItem.addEventListener('click', () => {
+        navigation.classList.remove('active');
+    })
+}) 
+ScrollReveal({ 
+    reset: true,
+    distance:'60px',
+    duration: 2500,
+    delay: 100
+
+});
+
+ScrollReveal().reveal('.home , .info h2 , .section-title-01 ,.section-title-02' , {delay : 500 ,origin :'left'});
+ScrollReveal().reveal('.home , .info h2 ,.home .info p ,.about-info .btn', {delay : 600 ,origin :'right'});
+ScrollReveal().reveal('.home , .info  , .btn ', {delay : 700 ,origin :'bottom'});
+ScrollReveal().reveal('.media-icons  , .contact-left li ,.contact-form ', {delay : 500 ,origin :'left', interval:200});
+ScrollReveal().reveal('.home-img  , about-img', {delay : 500 ,origin :'bottom'});
+ScrollReveal().reveal('.about .description , .copy-right', {delay : 500 ,origin :'right'});
+ScrollReveal().reveal('.about .professional-list li ', {delay : 500 ,origin :'right', interval:200});
+ScrollReveal().reveal('skill-description ,.services-description ,.contact-card ,.contact-left h2', {delay : 700 ,origin :'left', interval:100});
+ScrollReveal().reveal('.experience-card, .service-card ,.education , .portfolio .img-card ,.get-in-touch', {delay : 700 ,origin :'bottom', interval:200});
+ScrollReveal().reveal('footer .group ', {delay : 700 ,origin :'top', interval:200});
+
+
+
+
+
