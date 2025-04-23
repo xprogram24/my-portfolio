@@ -1193,6 +1193,59 @@ header.sticky .nav-bar{
     }
 }
 
+    @media (max-width:430px) {
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Adjusted for better content alignment */
+            margin: 1em; /* Reduced margin for better spacing on small screens */
+            padding: 0; /* Removed unnecessary padding */
+            /* Adjusted font size for readability */
+            line-height: 1.5; /* Improved line spacing for better readability */
+        }
+        .nav-bar{
+            position: relative;
+            height: calc(4rem + 1rem);
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+            transition: .6s ease;
+        }
+    
+        .section-title-01{
+            font-size: 3em;
+        }
+        .section-title-02{
+            font-size: 2em;
+            transform: translateY(-55px);
+        }
+    
+        .home .home-container{
+            display: grid;
+        }
+    
+        .home-container .home-img{
+            position: absolute;
+        }
+        .home-container .home-img img{
+            width: 65%;
+            transform: translate(80px, -180px);
+        }
+        .home .home-container .info{
+            font-size: 0.8em;
+        }
+        .media-icons{
+            margin-bottom: 80px;
+        }
+    
+    
+}
+
 
 
 
