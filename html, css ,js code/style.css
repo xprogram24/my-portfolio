@@ -1014,7 +1014,7 @@ header.sticky .nav-bar{
     
     .nav-menu-btn{
        
-       
+       display: block;
         background-size: 30px;
         background-position: center;
         width: 40px;
@@ -1024,6 +1024,7 @@ header.sticky .nav-bar{
     }
     #harmburger{
         color: #0000;
+        display: block;
     }
     .nav-items{
         position: relative;
@@ -1043,7 +1044,7 @@ header.sticky .nav-bar{
 
     .nav-close-btn{
         position: absolute;
-        
+        display: block;
         background-position: center;
        font-size: 20px;
         top: 0;
@@ -1052,10 +1053,6 @@ header.sticky .nav-bar{
         cursor: pointer;
     }
 }
-
-
-
-
 
 
 
