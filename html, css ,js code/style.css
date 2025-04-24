@@ -1164,6 +1164,7 @@ header.sticky .nav-bar{
 @media (max-width:730px) {
     body{
         margin: 5rem 0 0 0 ;
+        
     }
 
     .section-title-01{
@@ -1192,59 +1193,72 @@ header.sticky .nav-bar{
         margin-bottom: 80px;
     }
 }
+@media (max-width: 430px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        font-size: 0.9em; /* Adjust font size for readability */
+        line-height: 1.5;
+        height: 100vh; /* Ensure full viewport height */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    .section-title-01 {
+        font-size: 2.5em; /* Reduce font size */
+    }
 
-    @media (max-width:430px) {
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center; /* Adjusted for better content alignment */
-            margin: 1em; /* Reduced margin for better spacing on small screens */
-            padding: 0; /* Removed unnecessary padding */
-            /* Adjusted font size for readability */
-            line-height: 1.5; /* Improved line spacing for better readability */
-        }
-        .nav-bar{
-            position: relative;
-            height: calc(4rem + 1rem);
-            max-width: 1000px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 20px;
-            transition: .6s ease;
-        }
+    .section-title-02 {
+        font-size: 1.8em;
+        transform: translateY(-30px); /* Adjust positioning */
+    }
+
+  
+
+    .about-img img {
+        width: 100%; /* Ensure full width */
+        min-width: 0; /* Remove minimum width */
+    }
+   
+
+    .about .container .content {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        row-gap: 20px; /* Add spacing between items */
+    }
+
+    .contact .container .content {
+        flex-direction: column; /* Stack contact sections */
+        align-items: center;
+    }
     
-        .section-title-01{
-            font-size: 3em;
-        }
-        .section-title-02{
-            font-size: 2em;
-            transform: translateY(-55px);
-        }
-    
-        .home .home-container{
-            display: grid;
-        }
-    
-        .home-container .home-img{
-            position: absolute;
-        }
-        .home-container .home-img img{
-            width: 65%;
-            transform: translate(80px, -180px);
-        }
-        .home .home-container .info{
-            font-size: 0.8em;
-        }
-        .media-icons{
-            margin-bottom: 80px;
-        }
-    
-    
+    .btn {
+        padding: 15px 20px; /* Reduce padding */
+        font-size: 0.9em; /* Adjust font size */
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%; /* Ensure full width */
+        margin: 10px 0; /* Add spacing */
+        font-size: 0.9em; /* Adjust font size */
+    }
+
+    .contact-form .second-row {
+        flex-direction: column; /* Stack inputs vertically */
+    }
+
+    .contact-form .second-row input {
+        width: 100%; /* Full width for inputs */
+    }
+    footer{
+        display: none;
+    }
+
 }
+
+
 
 
 
