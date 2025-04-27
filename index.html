@@ -16,6 +16,16 @@
 </head>
 <body>
     <script src ="/html, css ,js code/all.min.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "HZXvXWsGqxdhesFP_",
+  });
+})();
+</script>
 
     <!--scroll to top/bottom-->
     <div class="scrollToTop-btn flex-center">
@@ -339,15 +349,15 @@
                 </li>
                 <li class="service-container">
                     <div class="service-card">
-                        <i class="fas fa-photo-video" id="pencil"></i>
-                        <h3>Graphic Design</h3>
+                        <i class="fa-solid fa-wrench" id="pencil"></i>
+                        <h3>Tech support and Repair</h3>
                         <div class="learn-more-btn">Learn more <i class="fas fa-long-arrow-alt-right" id="arrright"></i></div>
                     </div>
                     <div class="service-modal flex-center">
                         <div class="service-modal-body">
 
-                            <h3>graphics design</h3>
-                            <h4>what is graphics design ?</h4>
+                            <h3>Tech support and Repair</h3>
+                            <h4>what is Tech support and Repair ?</h4>
                             <p>write about graphics design Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, quae!</p>
                             <h4>what i provide</h4>
                             <ul>
@@ -437,7 +447,7 @@
                                     <h3>web Design</h3>
                                     <span>Vs Codes</span>
                                 </div>
-                                <img src ="/images/DALL·E 2024-11-20 01.24.51 - An image of a person sitting at a desk with a laptop, surrounded by open books, notes, and sketches of web design concepts. The scene shows an organiz.webp" alt="">
+                                <img src ="/images/tech.jpg" alt="">
                         </div>
 
                         <div class="portfolio-model flex-center">
@@ -564,19 +574,19 @@
                 <div class="contact-right">
                     <p>I'm always open to dicussing products <br><span>design works ,partnership and project collaboration</span></p>
                 
-                <form action="" class="contact-form">
+                <form action="" method="post" class="contact-form">
                     <div class="first-row">
-                        <input type="text" placeholder="name">
+                        <input type="text" placeholder="name" id="fullName">
                     </div>
                     <div class="second-row">
-                        <input type="email" name="" id="" placeholder="Email">
-                        <input type="text" placeholder="subject">
+                        <input type="email"  placeholder="Email" id="email">
+                        <input type="text" placeholder="subject" id="subject"/>
                     </div>
                     <div class="third-row">
-                        <textarea name="message" id="" rows="10" placeholder="message"></textarea>
+                        <textarea name="message" id="message" rows="10" placeholder="message"></textarea>
                     </div>
                     
-                    <button class="btn" type="submit"> send message <i class="fas fa-paper-plane"></i></button>
+                    <button class="btn" type="submit" onclick="sendEmail(event)"> send message <i class="fas fa-paper-plane"></i></button>
                 </form>
                 
             </div>
