@@ -170,12 +170,11 @@ ScrollReveal().reveal('footer .group ', {delay : 700 ,origin :'top', interval:20
 
 
 
-
 function sendEmail(e) {
     e.preventDefault(); // prevent form reload
     let parms = {
         from_name: document.getElementById("fullName").value,
-        email: document.getElementById("email").value,
+        email: document.getElementById("email_id").value,
         subject: document.getElementById("subject").value,
         message: document.getElementById("message").value
     }
