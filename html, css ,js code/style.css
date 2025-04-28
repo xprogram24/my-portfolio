@@ -888,8 +888,13 @@ header.sticky .nav-bar{
     border-radius: 5px;
     cursor: pointer;
  }
- #sentMsg{
-    margin-left: 30%;
+ .formbottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ #sentMsg,#MsgNtSent{
+       
     display:none;
  }
 
@@ -1163,8 +1168,8 @@ header.sticky .nav-bar{
         margin: 10px 0 22px;
     
 }
-#sentMsg{
-    margin-left: 20%;
+#sentMsg,#MsgNtSent{
+    
     display:none;
  }
 }
@@ -1200,6 +1205,10 @@ header.sticky .nav-bar{
     .media-icons{
         margin-bottom: 80px;
     }
+    #sentMsg,#MsgNtSent{
+       
+        display:none;
+     }
 }
 @media (max-width: 430px) {
     body {
@@ -1260,8 +1269,8 @@ header.sticky .nav-bar{
     .contact-form .second-row input {
         width: 100%; /* Full width for inputs */
     }
-    #sentMsg{
-        margin-left: 10%;
+    #sentMsg,#MsgNtSent{
+       
         display:none;
      }
     footer{

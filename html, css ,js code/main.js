@@ -181,8 +181,10 @@ function sendEmail(e) {
 
     emailjs.send('service_jwww2tr', 'template_eojs6ed', parms)
     .then((response) => {
+        console.log('message sent', response.status)
         sentMsg.style.display = 'block'
     }, (error) => {
-        alert('FAILED...', error);
+        MsgNtSent.style.display = 'block'
+        console.log('FAILED...', error);
     });
 }

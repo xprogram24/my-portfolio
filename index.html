@@ -587,8 +587,15 @@
                         <textarea name="message" id="message" rows="10" placeholder="message"></textarea>
                     </div>
                     
-                    <button class="btn" type="submit" onclick="sendEmail(event)"> send message <i class="fas fa-paper-plane"></i></button>
-                    <span id="sentMsg">Message successfully sent  <i class="fa-solid fa-circle-check fa-beat" style="color: #63E6BE;"></i></span>
+                    <div class="formbottom">
+                        <button class="btn" type="submit" onclick="sendEmail(event)"> send message <i class="fas fa-paper-plane"></i></button>
+                        <div class="alert">
+                            <span id="sentMsg">Message successfully sent  <i class="fa-solid fa-circle-check fa-beat" style="color: #63E6BE;"></i></span>
+                            <span id="MsgNtSent">Message failed  <i class="fa-solid fa-circle-xmark fa-beat" style="color: #ff0000;"></i></span>
+
+                        </div>               
+                    </div>
+
                 </form>
                 
             </div>
