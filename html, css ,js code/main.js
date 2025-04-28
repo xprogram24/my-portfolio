@@ -169,7 +169,7 @@ ScrollReveal().reveal('footer .group ', {delay : 700 ,origin :'top', interval:20
 
 
 
-
+sentMsg = document.getElementById('sentMsg')
 function sendEmail(e) {
     e.preventDefault(); // prevent form reload
     let parms = {
@@ -181,7 +181,7 @@ function sendEmail(e) {
 
     emailjs.send('service_jwww2tr', 'template_eojs6ed', parms)
     .then((response) => {
-        alert('SUCCESS!', response.status, response.text);
+        sentMsg.style.display = 'block'
     }, (error) => {
         alert('FAILED...', error);
     });
