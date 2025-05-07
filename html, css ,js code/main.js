@@ -188,3 +188,44 @@ function sendEmail(e) {
         console.log('FAILED...', error);
     });
 }
+
+
+//text typing effect
+const texts = [
+    "Welcome to my portfolio.",
+    "Front-end Devloper",
+    "I love building cool web apps.",
+    "Let's create something amazing together!"
+  ];
+
+  let currentText = 0;
+  let charIndex = 0;
+  let isDeleting =  false;
+  const element = document.getElementById('typewriter')
+
+  function typeEffect(){
+    const fullText = texts[currentText]
+    if(isDeleting){
+        element.textContent = fullText.substring(0, charIndex--)
+    }
+    else{
+        element.textContent = fullText.substring(0, charIndex++)
+    }
+
+    if (!isDeleting && charIndex === fullText.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1000); // Pause before deleting
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        currentText = (currentText + 1) % texts.length;
+        setTimeout(typeEffect, 500); // Pause before typing new sentence
+      } else {
+        const speed = isDeleting ? 50 : 100;
+        setTimeout(typeEffect, speed);
+      }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    typeEffect()
+  });
+  
