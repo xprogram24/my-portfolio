@@ -193,8 +193,8 @@ function sendEmail(e) {
 //text typing effect
 const texts = [
     "Welcome to my portfolio.",
-    "Front-end Devloper",
-    "I love building cool web apps.",
+    "Front-end Devloper  ",
+    "I love building cool websites.",
     "Let's create something amazing together!"
   ];
 

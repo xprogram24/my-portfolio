@@ -514,6 +514,10 @@ header.sticky .nav-bar{
 .bar .graphics:before{
     width: 63%;
 }
+
+.bar .react:before{
+    width: 10%;
+}
 .experience-card{
     background: var(--card-bg-color);
     border-bottom: 3px solid var(--second-color);
