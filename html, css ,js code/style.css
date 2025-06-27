@@ -717,11 +717,21 @@ header.sticky .nav-bar{
 .portfolio-list .img-card .info span{
     font-size: 1.2em;
 }
-
+.portfolio-list .img-card .info a{
+    background: var(--second-color);
+    color: #fff;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    padding: 5px 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: .3s ease;
+}
 .portfolio-list .img-card img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:contain;
 }
 .portfolio-model{
     z-index: 9999999;

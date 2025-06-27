@@ -28,32 +28,9 @@ serviceModals.forEach((modalView) => {
 
 //portfolio section
 
-const portfolioModals = document.querySelectorAll(".portfolio-model");
-const imgCards = document.querySelectorAll(".img-card");
-const portfolioCloseBtns = document.querySelectorAll(".portfolio-close-btn");
-
-// Function to open the modal
-var portfolioModal = function (modalClick) {
-    portfolioModals[modalClick].classList.add("active");
-};
-
-// Add event listeners to open modals
-imgCards.forEach((imgCard, ic) => {
-    imgCard.addEventListener("click", () => {
-        portfolioModal(ic);
-    });
-});
 
 
-// Add event listeners to close modals (via clicking outside)
-portfolioModals.forEach((modal, i) => {
-    modal.addEventListener("click", (e) => {
-        // Check if the click target is the modal itself, not the modal body
-        if (e.target === modal) {
-            portfolioModals[i].classList.remove("active");
-        }
-    });
-});
+
  //client swiper action
  var swiper = new Swiper(".clinet-Swiper", {
     slidesPerView: 1,
