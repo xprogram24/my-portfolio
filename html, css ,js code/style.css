@@ -337,6 +337,14 @@ header.sticky .nav-bar{
     min-width: 500px;
     border-radius: 10px;
 }
+.about-img #code{
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 10em;
+    color: var(--second-color);
+}
 .about-info .description{
     max-width: 600px;
 
@@ -516,7 +524,7 @@ header.sticky .nav-bar{
 }
 
 .bar .react:before{
-    width: 10%;
+    width: 30%;
 }
 .experience-card{
     background: var(--card-bg-color);
@@ -551,6 +559,10 @@ header.sticky .nav-bar{
     height: 2px;
     background: var(--line-color);
     margin: 10px 0 22px;
+}
+.experience-card #tt{
+   list-style-type: disc;
+   margin-bottom: 10px;
 }
 .edu-list .item:hover, .bar:hover, .experience-card:hover{
     transform: scale(1.03);
@@ -638,6 +650,7 @@ header.sticky .nav-bar{
 
 .service-modal-body h3{
     font-size: 2em;
+    margin-bottom: 1rem;
 }
 
 .service-modal-body h4{
@@ -646,12 +659,16 @@ header.sticky .nav-bar{
     margin: 15px 0 10px;
 
 }
+.service-modal-body p{
+    line-height: 1.5rem;
+}
 .service-modal-body ul li{
     margin-top: 15px;
 }
 
-.service-modal-body ul li  #circle{
+.service-modal-body ul li > #circle{
     color: var(--second-color);
+    margin-right: 5px;
 
 }
 .portfolio .container .content{
@@ -708,11 +725,21 @@ header.sticky .nav-bar{
 .portfolio-list .img-card .info span{
     font-size: 1.2em;
 }
-
+.portfolio-list .img-card .info a{
+    background: var(--second-color);
+    color: #fff;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    padding: 5px 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: .3s ease;
+}
 .portfolio-list .img-card img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:contain;
 }
 .portfolio-model{
     z-index: 9999999;
@@ -1113,8 +1140,7 @@ header.sticky .nav-bar{
     }
     
     .about-img{
-        min-width: 0;
-        width: 100%;
+        display: none;
     
     }
     .about-info{
