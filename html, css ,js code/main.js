@@ -58,7 +58,7 @@ serviceModals.forEach((modalView) => {
  })
  window.addEventListener('scroll', ()=>{
     const sections = document.querySelectorAll('section')
-    const scrollY = window.pageYOffset
+    const scrollY = window.scrollY
 
     sections.forEach(current  => {
         let sectionHeight = current.offsetHeight
@@ -146,7 +146,8 @@ ScrollReveal().reveal('footer .group ', {delay : 700 ,origin :'top', interval:20
 
 
 
-sentMsg = document.getElementById('sentMsg')
+const sentMsg = document.getElementById('sentMsg')
+const MsgNtSent = document.getElementById('MsgNtSent')
 function sendEmail(e) {
     e.preventDefault(); // prevent form reload
     let parms = {
@@ -160,8 +161,11 @@ function sendEmail(e) {
     .then((response) => {
         console.log('message sent', response.status)
         sentMsg.style.display = 'block'
+        document.getElementById('contactfrom').reset();
+        setTimeout(() => { sentMsg.style.display = 'none'; }, 4000);
     }, (error) => {
         MsgNtSent.style.display = 'block'
+        setTimeout(() => { MsgNtSent.style.display = 'none'; }, 4000);
         console.log('FAILED...', error);
     });
 }
@@ -170,7 +174,7 @@ function sendEmail(e) {
 //text typing effect
 const texts = [
     "Welcome to my portfolio.",
-    "Front-end Devloper  ",
+    "Full-Stack Web Developer",
     "I love building cool websites.",
     "Let's create something amazing together!"
   ];
