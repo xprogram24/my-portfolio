@@ -97,7 +97,11 @@ const savedIcons = localStorage.getItem("saved-icon")
 
 if(savedTheme){
     document.body.classList[savedTheme === 'dark' ? 'add' : 'remove']('dark-theme');
-    themebtn.classList[savedIcons === 'sun' ? 'add' : 'remove']('sun')
+    themebtn.classList[savedIcons === 'sun' ? 'add' : 'remove']('sun');
+} else {
+    // Default to dark mode if no theme is saved
+    document.body.classList.add('dark-theme');
+    themebtn.classList.add('sun');
 }
 //navigation 
 const menuBtn = document.querySelector(".nav-menu-btn")
@@ -161,7 +165,7 @@ function sendEmail(e) {
     .then((response) => {
         console.log('message sent', response.status)
         sentMsg.style.display = 'block'
-        document.getElementById('contactfrom').reset();
+        document.getElementById('contactform').reset();
         setTimeout(() => { sentMsg.style.display = 'none'; }, 4000);
     }, (error) => {
         MsgNtSent.style.display = 'block'

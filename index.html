@@ -16,9 +16,27 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            corePlugins: { preflight: false },
+            theme: {
+                extend: {
+                    colors: {
+                        zinc: {
+                            800: '#27272a',
+                            900: '#18181b',
+                            950: '#09090b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body class="dark-theme">
     <script src="./html, css ,js code/all.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -250,49 +268,205 @@
         <div class="container flex-center">
             <h1 class="section-title-01">portfolio</h1>
             <h2 class="section-title-02">portfolio</h2>
-            <div class="content">
-                <!--cards of what i have built-->
-                <div class="card-grid">
-                    <div class="feature-card">
-                        <h3>Axel-AI</h3>
-                        <span class="meta">HTML, CSS, JavaScript</span>
-                        <p>A personal AI assistant interface with a clean UI for interaction and future automation integration.</p>
-                        <div class="links">
-                            <a href="https://github.com/xprogram24/Axel-AI.git"><i class="fab fa-github"></i> Source Code</a>
+            <div class="content w-full">
+                
+                <!-- Personal Projects Bento Grid -->
+                <div class="mb-6">
+                    <h3 class="text-3xl font-bold bg-gradient-to-r from-zinc-200 to-zinc-500 bg-clip-text text-transparent mb-8">Personal Projects</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                    
+                    <!-- Card 1 (Span 1) -->
+                    <div class="md:col-span-1 group relative bg-zinc-800/80 border border-zinc-700/50 rounded-2xl p-8 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(56,189,248,0.15)] transition-all duration-300 overflow-hidden flex flex-col">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative z-10 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-white mb-2 tracking-wide">Axel-AI</h3>
+                            <span class="text-sm text-sky-400 font-semibold mb-4">HTML, CSS, JavaScript</span>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">A personal AI assistant interface with a clean UI for interaction and future automation integration.</p>
+                            <div class="flex gap-4 mt-auto">
+                                <a href="https://github.com/xprogram24/Axel-AI.git" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-semibold text-sm flex items-center gap-2 hover:text-sky-300 transition-colors">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="feature-card">
-                        <h3>Room Allocation System</h3>
-                        <span class="meta">React, Django Framework, MySQL</span>
-                        <p>A comprehensive institutional system including a digital room allocation module complete with custom database schemas and robust documentation.</p>
-                        <div class="links">
-                            <a href="https://github.com/xprogram24/room-allocation-system.git"><i class="fab fa-github"></i> Source Code</a>
-                            <a href="https://roomallocation.vercel.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+
+                    <!-- Card 2 (Span 2) -->
+                    <div class="md:col-span-2 group relative bg-zinc-800/80 border border-zinc-700/50 rounded-2xl p-8 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(56,189,248,0.15)] transition-all duration-300 overflow-hidden flex flex-col">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative z-10 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-white mb-2 tracking-wide">Room Allocation System</h3>
+                            <span class="text-sm text-sky-400 font-semibold mb-4">React, Django Framework, MySQL</span>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">A comprehensive institutional system including a digital room allocation module complete with custom database schemas and robust documentation.</p>
+                            <div class="flex gap-6 mt-auto">
+                                <a href="https://github.com/xprogram24/room-allocation-system.git" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-semibold text-sm flex items-center gap-2 hover:text-sky-300 transition-colors">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                                <a href="https://roomallocation.vercel.app" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-semibold text-sm flex items-center gap-2 hover:text-sky-300 transition-colors">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="feature-card">
-                        <h3>Electricity Billing System</h3>
-                        <span class="meta">Raw Python & SQL</span>
-                        <p>A data-driven application built using raw Python and SQL utilities to handle core data processing and administrative challenges.</p>
-                        <div class="links">
-                            <a href="https://github.com/xprogram24/september-Projects.git"><i class="fab fa-github"></i> Source Code</a>
+
+                    <!-- Card 3 (Span 2) -->
+                    <div class="md:col-span-2 group relative bg-zinc-800/80 border border-zinc-700/50 rounded-2xl p-8 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(56,189,248,0.15)] transition-all duration-300 overflow-hidden flex flex-col">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative z-10 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-white mb-2 tracking-wide">Electricity Billing System</h3>
+                            <span class="text-sm text-sky-400 font-semibold mb-4">Raw Python & SQL</span>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">A data-driven application built using raw Python and SQL utilities to handle core data processing and administrative challenges.</p>
+                            <div class="flex gap-4 mt-auto">
+                                <a href="https://github.com/xprogram24/september-Projects.git" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-semibold text-sm flex items-center gap-2 hover:text-sky-300 transition-colors">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="feature-card">
-                        <h3>NextSent</h3>
-                        <span class="meta">HTML, CSS, JavaScript</span>
-                        <p>A responsive frontend UI designed for a modern web application, demonstrating strong layout and design principles.</p>
-                        <div class="links">
-                            <a href="https://github.com/xprogram24/NextSent.git"><i class="fab fa-github"></i> Source Code</a>
+
+                    <!-- Card 4 (Span 1) -->
+                    <div class="md:col-span-1 group relative bg-zinc-800/80 border border-zinc-700/50 rounded-2xl p-8 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(56,189,248,0.15)] transition-all duration-300 overflow-hidden flex flex-col">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative z-10 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-white mb-2 tracking-wide">NextSent</h3>
+                            <span class="text-sm text-sky-400 font-semibold mb-4">HTML, CSS, JavaScript</span>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">A responsive frontend UI designed for a modern web application, demonstrating strong layout and design principles.</p>
+                            <div class="flex gap-4 mt-auto">
+                                <a href="https://github.com/xprogram24/NextSent.git" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-semibold text-sm flex items-center gap-2 hover:text-sky-300 transition-colors">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="feature-card">
-                        <h3>Andigram</h3>
-                        <span class="meta">In Active Development</span>
-                        <p>A scalable social media app concept with login/signup pages, post layout, and profile structure built from the ground up.</p>
-                        <div class="links">
-                            <a href="https://github.com/xprogram24/Andigram.git"><i class="fab fa-github"></i> Source Code</a>
+
+                    <!-- Card 5 (Span Full) -->
+                    <div class="md:col-span-3 group relative bg-zinc-800/80 border border-zinc-700/50 rounded-2xl p-8 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(56,189,248,0.15)] transition-all duration-300 overflow-hidden flex flex-col">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative z-10 flex-grow flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                            <div class="md:max-w-2xl">
+                                <h3 class="text-xl font-bold text-white mb-2 tracking-wide">Andigram</h3>
+                                <span class="text-sm text-sky-400 font-semibold mb-4 inline-block">In Active Development</span>
+                                <p class="text-zinc-400 text-sm leading-relaxed mb-4">A scalable social media app concept with login/signup pages, post layout, and profile structure built from the ground up.</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://github.com/xprogram24/Andigram.git" target="_blank" rel="noopener noreferrer" class="text-sky-400 font-semibold text-sm flex items-center gap-2 hover:text-sky-300 transition-colors">
+                                    <i class="fab fa-github"></i> Source Code
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Premium Client Templates (cdevs) Subsection -->
+                <div class="mt-24 w-full">
+                    <div class="mb-12 border-b border-zinc-800 pb-6 text-center md:text-left">
+                        <h3 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zinc-200 to-zinc-500 bg-clip-text text-transparent">Premium Client Templates (cdevs)</h3>
+                        <p class="text-zinc-400 mt-4 max-w-2xl text-sm leading-relaxed mx-auto md:mx-0">Production-ready, conversion-optimized landing pages and digital experiences built for modern businesses under my agency.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+                        
+                        <!-- cdevs Card 1 -->
+                        <div class="group relative bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:scale-[1.02] hover:border-sky-500/50 transition-all duration-300 flex flex-col">
+                            <div class="absolute -inset-0.5 bg-gradient-to-br from-sky-500 to-indigo-500 rounded-2xl opacity-0 group-hover:opacity-10 blur transition duration-500"></div>
+                            <div class="relative z-10 flex-grow flex flex-col">
+                                <div class="flex items-start justify-between mb-6">
+                                    <h4 class="text-2xl font-bold text-white tracking-tight">Corporate & Business</h4>
+                                    <span class="bg-sky-500/10 text-sky-400 text-xs font-bold px-3 py-1 rounded-full border border-sky-500/20">Template</span>
+                                </div>
+                                <ul class="text-zinc-400 text-sm space-y-3 mb-8 flex-grow">
+                                    <li class="flex items-center gap-3"><i class="fas fa-check text-sky-400 text-xs"></i> High-converting professional layout</li>
+                                    <li class="flex items-center gap-3"><i class="fas fa-check text-sky-400 text-xs"></i> Seamless integrations & CMS ready</li>
+                                    <li class="flex items-center gap-3"><i class="fas fa-check text-sky-400 text-xs"></i> Optimized for extreme performance</li>
+                                </ul>
+                                <div class="flex items-center justify-between border-t border-zinc-800/50 pt-6">
+                                    <div class="flex gap-2">
+                                        <span class="text-xs text-zinc-500 bg-zinc-800 px-2 py-1 rounded">Next.js</span>
+                                        <span class="text-xs text-zinc-500 bg-zinc-800 px-2 py-1 rounded">Tailwind</span>
+                                    </div>
+                                    <a href="/corporate" target="_blank" rel="noopener noreferrer" class="group/btn flex items-center justify-center gap-2 bg-white text-zinc-900 px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-zinc-200 transition-colors">
+                                        Live Preview <i class="fas fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- cdevs Card 2 -->
+                        <div class="group relative bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:scale-[1.02] hover:border-purple-500/50 transition-all duration-300 flex flex-col">
+                            <div class="absolute -inset-0.5 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl opacity-0 group-hover:opacity-10 blur transition duration-500"></div>
+                            <div class="relative z-10 flex-grow flex flex-col">
+                                <div class="flex items-start justify-between mb-6">
+                                    <h4 class="text-2xl font-bold text-white tracking-tight">Creative Portfolio</h4>
+                                    <span class="bg-purple-500/10 text-purple-400 text-xs font-bold px-3 py-1 rounded-full border border-purple-500/20">Template</span>
+                                </div>
+                                <ul class="text-zinc-400 text-sm space-y-3 mb-8 flex-grow">
+                                    <li class="flex items-center gap-3"><i class="fas fa-check text-purple-400 text-xs"></i> Asymmetric, bento-grid aesthetics</li>
+                                    <li class="flex items-center gap-3"><i class="fas fa-check text-purple-400 text-xs"></i> Fluid micro-interactions & GSAP</li>
+                                    <li class="flex items-center gap-3"><i class="fas fa-check text-purple-400 text-xs"></i> Stunning dark mode defaults</li>
+                                </ul>
+                                <div class="flex items-center justify-between border-t border-zinc-800/50 pt-6">
+                                    <div class="flex gap-2">
+                                        <span class="text-xs text-zinc-500 bg-zinc-800 px-2 py-1 rounded">React</span>
+                                        <span class="text-xs text-zinc-500 bg-zinc-800 px-2 py-1 rounded">Framer</span>
+                                    </div>
+                                    <a href="/creative" target="_blank" rel="noopener noreferrer" class="group/btn flex items-center justify-center gap-2 bg-white text-zinc-900 px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-zinc-200 transition-colors">
+                                        Live Preview <i class="fas fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- cdevs Card 3 -->
+                        <div class="group relative bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:scale-[1.02] hover:border-emerald-500/50 transition-all duration-300 flex flex-col">
+                            <div class="absolute -inset-0.5 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl opacity-0 group-hover:opacity-10 blur transition duration-500"></div>
+                            <div class="relative z-10 flex-grow flex flex-col">
+                                <div class="flex items-start justify-between mb-6">
+                                    <h4 class="text-2xl font-bold text-white tracking-tight">E-Commerce Showcase</h4>
+                                    <span class="bg-emerald-500/10 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full border border-emerald-500/20">Template</span>
+                                </div>
+                                <ul class="text-zinc-400 text-sm space-y-3 mb-8 flex-grow">
+                                    <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400 text-xs"></i> Dynamic shopping cart drawers</li>
+                                    <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400 text-xs"></i> Secure checkout flow integration</li>
+                                    <li class="flex items-center gap-3"><i class="fas fa-check text-emerald-400 text-xs"></i> Conversion-focused layouts</li>
+                                </ul>
+                                <div class="flex items-center justify-between border-t border-zinc-800/50 pt-6">
+                                    <div class="flex gap-2">
+                                        <span class="text-xs text-zinc-500 bg-zinc-800 px-2 py-1 rounded">Vanilla JS</span>
+                                        <span class="text-xs text-zinc-500 bg-zinc-800 px-2 py-1 rounded">Stripe API</span>
+                                    </div>
+                                    <a href="/ecommerce" target="_blank" rel="noopener noreferrer" class="group/btn flex items-center justify-center gap-2 bg-white text-zinc-900 px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-zinc-200 transition-colors">
+                                        Live Preview <i class="fas fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- cdevs Card 4 -->
+                        <div class="group relative bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:scale-[1.02] hover:border-amber-500/50 transition-all duration-300 flex flex-col">
+                            <div class="absolute -inset-0.5 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-10 blur transition duration-500"></div>
+                            <div class="relative z-10 flex-grow flex flex-col">
+                                <div class="flex items-start justify-between mb-6">
+                                    <h4 class="text-2xl font-bold text-white tracking-tight">Professional Service</h4>
+                                    <span class="bg-amber-500/10 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/20">Template</span>
+                                </div>
+                                <ul class="text-zinc-400 text-sm space-y-3 mb-8 flex-grow">
+                                    <li class="flex items-center gap-3"><i class="fas fa-check text-amber-400 text-xs"></i> Methodical timeline components</li>
+                                    <li class="flex items-center gap-3"><i class="fas fa-check text-amber-400 text-xs"></i> High-agency testimonials grid</li>
+                                    <li class="flex items-center gap-3"><i class="fas fa-check text-amber-400 text-xs"></i> Validated consultation forms</li>
+                                </ul>
+                                <div class="flex items-center justify-between border-t border-zinc-800/50 pt-6">
+                                    <div class="flex gap-2">
+                                        <span class="text-xs text-zinc-500 bg-zinc-800 px-2 py-1 rounded">Tailwind</span>
+                                        <span class="text-xs text-zinc-500 bg-zinc-800 px-2 py-1 rounded">HTML5</span>
+                                    </div>
+                                    <a href="/designer" target="_blank" rel="noopener noreferrer" class="group/btn flex items-center justify-center gap-2 bg-white text-zinc-900 px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-zinc-200 transition-colors">
+                                        Live Preview <i class="fas fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -350,7 +524,7 @@
                     <p>I'm always open to discussing products <br><span>design works, partnership and project
                             collaboration</span></p>
 
-                    <form class="contact-form" id="contactfrom">
+                    <form class="contact-form" id="contactform">
                         <div class="first-row">
                             <input type="text" placeholder="name" id="fullName">
                         </div>
